@@ -47,4 +47,4 @@ then
     VALIDATE $? "installing MYSQL"
 else
    echo "MYSQL already installed...nothing to do"
-fi    
+fi

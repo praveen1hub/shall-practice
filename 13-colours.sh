@@ -1,6 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+N="\e[33m"
 
 check_ROOT(){
     if [$USERID -ne 0]
@@ -15,10 +18,10 @@ VALIDATE(){
        
        if [ $1 -ne o]
        then 
-           echo "$2 is...FALIED"
+           echo -e "$2 is...FALIED"
            exit 1
         else
-           echo "$2 is...SUCCESS"
+           echo -e "$2 is...SUCCESS"
         fi
     }
 

@@ -10,7 +10,7 @@ CHECK_ROOT(){
     then
         echo "Please run this script with root priveleges"
         exit 1
-        
+
     fi
 }
 
@@ -25,7 +25,8 @@ VALIDATE(){
         fi
     }
 
-check_ROOT  
+
+CHECK_ROOT  
 
 dnf list install git
 

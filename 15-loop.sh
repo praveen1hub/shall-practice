@@ -10,7 +10,6 @@ CHECK_ROOT(){
     then
         echo "Please run this script with root priveleges"
         exit 1
-
     fi
 }
 
@@ -24,23 +23,19 @@ VALIDATE(){
     fi
 }
 
-CHECK_ROOT  
+CHECK_ROOT
 
-for package in $@
+# sh 15-loops.sh git mysql postfix nginx
+for package in $@ # $@ refers to all arguments passed to it
 do
-
-    dnf list install $PACKAGE
+    dnf list installed $package
     if [ $? -ne 0 ]
-    then 
-
-        echo "$PACKAGE is not installed.going to install"
-        dnf install $PACKAGE -y
-        VALIDATE $? "installing $PACKAGE"
+    then
+        echo "$package is not installed, going to install it.."
+        dnf install $package -y
+        VALIDATE $? "Installing $package"
     else
-
-        echo "$PACKAGE is already installed...nothing to do"
-    
+        echo "$package is already installed..nothing to do"
     fi
-
+    
 done
-

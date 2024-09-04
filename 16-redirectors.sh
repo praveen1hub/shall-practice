@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 
 LOGS_FOLDER="/var/log/shell-script"

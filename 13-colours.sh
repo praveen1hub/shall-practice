@@ -16,7 +16,7 @@ CHECK_ROOT(){
 
 VALIDATE(){
        
-       if [ $1 -ne o]
+       if [ $1 -ne 0 ]
        then 
            echo -e "$2 is...FALIED"
            exit 1
@@ -30,7 +30,7 @@ CHECK_ROOT
 
 dnf list install git
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
    echo "git is not installed.going to install"
    dnf install git -y
@@ -41,7 +41,7 @@ fi
 
 dnf list install MYSQL
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
     echo "MYSQL is not installed.going to install"
     dnf install MYSQL

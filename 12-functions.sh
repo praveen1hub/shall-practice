@@ -45,3 +45,5 @@ then
 else
    echo "MYSQL already installed...nothing to do"
 fi    
+
+echo  "hello all"

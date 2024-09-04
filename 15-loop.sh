@@ -25,7 +25,7 @@ VALIDATE(){
         fi
     }
 
-check_ROOT  
+CHECK_ROOT  
 
 for package in $@
 do
